@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan PKL - Cyber Security</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="matrix.js" defer></script>
+    <script src="terminal.js" defer></script>
+    <script src="scroll.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#biodata">Biodata</a></li>
+            <li><a href="#profil">Profil IDUKA</a></li>
+            <li><a href="#pendahuluan">Pendahuluan</a></li>
+            <li><a href="#inti">Inti</a></li>
+            <li><a href="#penutup">Penutup</a></li>
+            <li><a href="#lampiran">Lampiran</a></li>
+        </ul>
+    </nav>
+
+    <div class="matrix-bg" id="matrix"></div>
+    <header>
+        <div class="glitch-container">
+            <h1 class="glitch" data-text="Laporan Praktik Kerja Lapangan">Laporan Praktik Kerja Lapangan</h1>
+            <h2 class="cyber-text">Bidang Cyber Security</h2>
+        </div>
+        <div class="terminals-container">
+            <!-- Network Analysis Terminal -->
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-button close"></span>
+                        <span class="terminal-button minimize"></span>
+                        <span class="terminal-button maximize"></span>
+                    </div>
+                    <div class="terminal-title">Network Analysis</div>
+                </div>
+                <div class="terminal-content" id="terminal1">
+                    <div class="terminal-line">
+                        <span class="prompt">root@kali</span><span class="prompt-char">~#</span> <span
+                            class="command">sudo wireshark -i eth0</span>
+                    </div>
+                    <div class="terminal-output"></div>
+                </div>
+            </div>
+
+            <!-- Vulnerability Scanner Terminal -->
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-button close"></span>
+                        <span class="terminal-button minimize"></span>
+                        <span class="terminal-button maximize"></span>
+                    </div>
+                    <div class="terminal-title">Vulnerability Scanner</div>
+                </div>
+                <div class="terminal-content" id="terminal2">
+                    <div class="terminal-line">
+                        <span class="prompt">root@kali</span><span class="prompt-char">~#</span> <span
+                            class="command">nmap -sV --script vuln 192.168.1.0/24</span>
+                    </div>
+                    <div class="terminal-output"></div>
+                </div>
+            </div>
+
+            <!-- Penetration Testing Terminal -->
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-button close"></span>
+                        <span class="terminal-button minimize"></span>
+                        <span class="terminal-button maximize"></span>
+                    </div>
+                    <div class="terminal-title">Penetration Testing</div>
+                </div>
+                <div class="terminal-content" id="terminal3">
+                    <div class="terminal-line">
+                        <span class="prompt">root@kali</span><span class="prompt-char">~#</span> <span
+                            class="command">msfconsole</span>
+                    </div>
+                    <div class="terminal-output"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="biodata">
+            <h2>Biodata</h2>
+            <div class="card biodata-card">
+                <div class="profile-images">
+                    <div class="main-profile-img">
+                        <img src="foto-profile.jpg" alt="Foto Profil" class="profile-img">
+                        <div class="img-overlay">
+                            <span class="cyber-text">PROFILE</span>
+                        </div>
+                    </div>
+                    <div class="additional-images">
+                        <div class="add-img-container">
+                            <img src="profile-2.jpg" alt="Additional Photo 1" class="add-img">
+                            <div class="img-overlay">
+                                <span class="cyber-text">SKILL</span>
+                            </div>
+                        </div>
+                        <div class="add-img-container">
+                            <img src="projekbesar.jpeg" alt="Additional Photo 2" class="add-img">
+                            <div class="img-overlay">
+                                <span class="cyber-text">ACTIVITY</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="biodata-info">
+                    <p><strong>Nama:</strong> Fadhillah Eka Kristianto</p>
+                    <p><strong>NIS:</strong> [Nomor Induk Siswa]</p>
+                    <p><strong>Kelas:</strong> XI TKJ D</p>
+                    <p><strong>Sekolah:</strong> SMKN 8 MALANG</p>
+                    <p><strong>Tahun Ajaran:</strong> 2024/2025</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="profil">
+            <h2>Profil IDUKA</h2>
+            <div class="card company-card">
+                <div class="company-images">
+                    <div class="main-company-img">
+                        <img src="cvtitikkoma.png" alt="Foto Perusahaan" class="company-img">
+                        <div class="img-overlay">
+                            <span class="cyber-text">COMPANY</span>
+                        </div>
+                    </div>
+                    <div class="additional-images">
+                        <div class="add-img-container">
+                            <img src="facility.png" alt="Company Photo 1" class="add-img">
+                            <div class="img-overlay">
+                                <span class="cyber-text">FACILITY</span>
+                            </div>
+                        </div>
+                        <div class="add-img-container">
+                            <img src="workshop.png" alt="Company Photo 2" class="add-img">
+                            <div class="img-overlay">
+                                <span class="cyber-text">WORKSPACE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="company-info">
+                    <h3>CV TITIKKOMA</h3>
+                    <p><strong>Alamat:</strong> Blok AG, Jl. Perumahan Banjararum Asri No.18, Tanjung, Banjararum, Kec.
+                        Singosari,
+                        Kabupaten Malang, Jawa Timur 65153</p>
+                    <p><strong>Bidang:</strong> Cyber Security</p>
+                    <p><strong>Deskripsi:</strong> perusahaan ini adalah menyediakan layanan dasar seperti
+                        penetration testing dan cybersecurity consulting. Layanan ini dirancang untuk
+                        membantu bisnis mengidentifikasi dan mengatasi kerentanan dalam sistem ,
+                        serta memberikan konsultasi untuk meningkatkan keamanan siber secara
+                        keseluruhan.Pada tahun-tahun awal operasinya,</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pendahuluan">
+            <h2>Pendahuluan</h2>
+            <div class="card">
+                <h3>Latar Belakang</h3>
+                <p>Praktik Kerja Lapangan (PKL) merupakan kegiatan yang wajib ditempuh oleh semua
+                    siswa SMKN 8 Malang dan juga untuk meningkatkan kompetensi siswa dapat
+                    menjadikan lebih berpengalaman dan lebih mengerti untuk menghadapi teknologi terbaru
+                    di dunia.</p>
+
+                <h3>Tujuan</h3>
+                <p>Memberikan pengalaman kerja langsung (real) kepada peserta didik dalam
+                    rangka menanamkan (internalize) iklim kerja positif yang berorientasi pada
+                    peduli mutu proses dan hasil kerja.
+                    Menanamkan etos kerja yang tinggi bagi peserta didik untuk memasuki dunia
+                    kerja dalam menghadapi tuntutan pasar kerja global.
+                    Memenuhi hal-hal yang belum dipenuhi di sekolah agar mencapai keutuhan
+                    standar kompetensi lulusan.
+                    Mengaktualisasikan salah satu bentuk aktivitas dalam penyelenggaraan
+                    Model Pendidikan Sistem (PSG) antara SMK dan Industri Pasangan
+                    DUDIKA yang memadukan secara sistematis dan sistemik.</p>
+            </div>
+        </section>
+
+        <section id="inti">
+            <h2>Inti</h2>
+            <div class="card">
+                <h3>Kompetensi</h3>
+                <ul>
+                    <li>Network Security attack</li>
+                    <li>Penetration Testing</li>
+                    <li>Maintenance Jaringan</li>
+                    <li>Vulnerability Analysis</li>
+                    <li>Security Tools Implementation</li>
+                </ul>
+
+                <h3>Portfolio</h3>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <h4>Project pertama</h4>
+                        <p>Scripting Tools dan OSINT</p>
+                    </div>
+                    <div class="portfolio-item">
+                        <h4>Project terahir</h4>
+                        <p>Melakukan pentest kepada web tigaserangkai.com dan membuat vidio tutorial untuk perusahaan
+                            intern</p>
+                    </div>
+                </div>
+
+                <h3>Kegiatan Selama PKL</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Minggu pertama</h4>
+                        <p>Membuat script yang bisa melakukan spam ke wa, dengan tujuan awal membuat jera orang yang
+                            berhasil mengganti nomor customer service dari hotel Gajahmada graha Malang</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Minggu terahir</h4>
+                        <p>Pada minggu terakhir PKL, saya melakukan penetration testing (pentest) terhadap website
+                            tigaserangkai.com untuk mengidentifikasi potensi kerentanan dan mengevaluasi tingkat
+                            keamanannya. Kegiatan ini mencakup proses scanning, analisis celah keamanan, serta pelaporan
+                            hasil temuan secara sistematis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="penutup">
+            <h2>Penutup</h2>
+            <div class="card">
+                <h3>Kesimpulan</h3>
+                <p>dengan adanya pkl ini, siswa lebih dapat mengenal keamanan sistem jaringan dan website</p>
+
+                <h3>Kesan</h3>
+                <p>Selama PKL di perusahaan cyber security, saya mendapat banyak pengalaman baru, mulai dari mengenal
+                    tools keamanan, belajar analisis kerentanan, sampai memahami pentingnya etika dalam dunia digital.
+                    Pengalaman ini sangat membuka wawasan dan menambah semangat saya untuk mendalami bidang ini.</p>
+
+                <h3>Saran</h3>
+                <p>Saya berharap perusahaan ini terus memberikan kesempatan bagi siswa untuk belajar dan terlibat
+                    langsung dalam proyek nyata. Mungkin ke depannya bisa ditambah sesi pelatihan rutin atau workshop
+                    singkat agar peserta PKL lebih cepat memahami tugas dan alur kerja.</p>
+            </div>
+        </section>
+
+        <section id="lampiran">
+            <h2>Lampiran</h2>
+            <div class="gallery">
+                <div class="gallery-row">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="tshark.png" alt="Dokumentasi 1">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Penetration Testing</h3>
+                                    <p>Network Security Assessment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="iot.jpg" alt="Dokumentasi 2">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>IOT Sensor Jarak</h3>
+                                    <p>IOT Arduino</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="jaringan.jpg" alt="Dokumentasi 3">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Maintenance Jaringan</h3>
+                                    <p>Security Monitoring</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="event.jpg" alt="Dokumentasi 4">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Event Cyber Security</h3>
+                                    <p>SMK Telkom Malang</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="ktp.png" alt="Dokumentasi 5">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Kebocoran Data</h3>
+                                    <p>Mencari data bocor di internet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="image-container">
+                            <img src="kibana.png" alt="Dokumentasi 6">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h3>Digital Forensics</h3>
+                                    <p>Analis Log apache Telkom</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-section">
+            <div class="social-links">
+                <a href="https://wa.me/6282338680534" target="_blank" class="social-button whatsapp-button">
+                    <div class="button-content">
+                        <i class="social-icon">📱</i>
+                        <span class="button-text">WhatsApp</span>
+                        <div class="button-glitch"></div>
+                    </div>
+                </a>
+                <a href="https://github.com/keazzfaa" target="_blank" class="social-button github-button">
+                    <div class="button-content">
+                        <i class="social-icon">🐱</i>
+                        <span class="button-text">GitHub</span>
+                        <div class="button-glitch"></div>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/keazz.fa" target="_blank" class="social-button instagram-button">
+                    <div class="button-content">
+                        <i class="social-icon">📸</i>
+                        <span class="button-text">Instagram</span>
+                        <div class="button-glitch"></div>
+                    </div>
+                </a>
+                <a href="mailto:fadhillah.eka28@gmail.com" class="social-button email-button">
+                    <div class="button-content">
+                        <i class="social-icon">📧</i>
+                        <span class="button-text">Email</span>
+                        <div class="button-glitch"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 Laporan PKL - Cyber Security</p>
+    </footer>
+</body>
+
+</html>
